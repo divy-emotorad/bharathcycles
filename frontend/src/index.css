@@ -1,0 +1,40 @@
+@font-face {
+  font-family: Metropolis-Regular;
+  src: url("assets/fonts/Metropolis-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Metropolis-Thin;
+  src: url("assets/fonts/Metropolis-Thin.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Metropolis-Medium;
+  src: url("assets/fonts/Metropolis-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Metropolis-Bold;
+  src: url("assets/fonts/Metropolis-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Metropolis-Black;
+  src: url("assets/fonts/Metropolis-Black.otf") format("opentype");
+}
+
+@font-face {
+  font-family: SpeedBeast;
+  src: url("assets/fonts/SpeedBeast.otf") format("opentype");
+}
+
+body {
+  font-family: Metropolis-Regular;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.speedbeast {
+  font-family: SpeedBeast !important;
+  color: #004dac;
+}
