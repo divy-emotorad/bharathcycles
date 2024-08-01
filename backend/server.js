@@ -12,7 +12,7 @@ const app = express();
 
 // using cors
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://em-x-bharathcycles-mub8a.ondigitalocean.app/",
   optionsSuccessStatus: 200,
 };
 

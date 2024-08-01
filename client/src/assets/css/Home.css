@@ -1,0 +1,49 @@
+.form-div-desktop {
+  width: 350px;
+  top: 12%;
+  right: 7%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(214, 173, 92, 0.3) 33%,
+    rgba(192, 158, 89, 0.3) 67%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  backdrop-filter: blur(8px);
+}
+
+.form-div-mobile {
+  background: linear-gradient(
+    to bottom,
+    #004dac 0%,
+    rgba(12, 54, 126, 0.8) 100%
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+label {
+  font-family: Metropolis-Medium !important;
+}
+
+.form-mobile-div {
+  background-color: #f5f5f5;
+  border-radius: 15px;
+}
+
+.submit-btn {
+  background-color: #004dac;
+  padding: 0.6em;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .submit-btn {
+    background-color: white;
+    color: #004dac;
+  }
+}
