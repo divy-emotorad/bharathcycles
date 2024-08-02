@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../assets/css/Home.css";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [name, setName] = useState("");
@@ -9,6 +10,8 @@ const Home = () => {
   const [pincode, setPincode] = useState("");
   const [state, setState] = useState("");
   const [city, setCity] = useState("");
+
+  const navigate = useNavigate("");
 
   const submitLead = async (e) => {
     e.preventDefault();
@@ -21,7 +24,7 @@ const Home = () => {
     const lead = { name, email, phoneNumber, pincode, city, state };
     const { data } = await axios.post("/api/v1/form", lead, config);
     if (data) {
-      alert("Details Submitted Succesfully!");
+      navigate("/thank-you");
     }
   };
 
