@@ -247,7 +247,6 @@ const Home = () => {
                 }
                 class="form-control"
                 id="floatingInput"
-                placeholder=""
               />
             </div>
             <div className="mb-3">
