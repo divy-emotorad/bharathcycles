@@ -5,14 +5,13 @@
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.3) 0%,
-    rgba(214, 173, 92, 0.3) 33%,
-    rgba(192, 158, 89, 0.3) 67%,
     rgba(255, 255, 255, 0.3) 100%
   );
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(10px);
 }
 
 .form-div-mobile {
+  width: 400px;
   background: linear-gradient(
     to bottom,
     #004dac 0%,
@@ -41,9 +40,30 @@ label {
   color: white;
 }
 
-@media screen and (max-width: 850px) {
+.form-div-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
   .submit-btn {
     background-color: white;
     color: #004dac;
+  }
+  .form-div-desktop {
+    display: none;
+  }
+  .form-div-mobile {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .form-div-desktop {
+    top: 44%;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  .form-div-mobile {
+    display: none;
   }
 }
