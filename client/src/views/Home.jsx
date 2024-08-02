@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import "../assets/css/Home.css";
 
@@ -22,6 +22,33 @@ const Home = () => {
     const { data } = await axios.post("/api/v1/form", lead, config);
     if (data) {
       alert("Details Submitted Succesfully!");
+    }
+  };
+
+  useEffect(() => {
+    if (pincode.length === 6) {
+      getAddressDetails();
+    }
+  }, [pincode]);
+
+  const getAddressDetails = async () => {
+    const options = {
+      method: "GET",
+      url: `https://api.postalpincode.in/pincode/${pincode}`,
+      headers: {
+        "content-type": "application/json",
+        "Content-Type": "application/json",
+      },
+    };
+
+    try {
+      const { data } = await axios.request(options);
+      if (data[0].PostOffice) {
+        setCity(data[0].PostOffice[0].District);
+        setState(data[0].PostOffice[0].State);
+      }
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -111,7 +138,7 @@ const Home = () => {
                   }
                   class="form-control"
                   id="floatingInput"
-                  placeholder=""
+                  placeholder="Enter Phone Number"
                 />
               </div>
               <div className="mb-3">
@@ -281,6 +308,7 @@ const Home = () => {
                   className="form-control"
                   id="exampleFormControlInput1"
                   placeholder="Enter City"
+                  autoComplete="new-password"
                   value={city}
                   onChange={(e) => {
                     setCity(e.target.value);
@@ -297,6 +325,7 @@ const Home = () => {
                 <input
                   type="text"
                   className="form-control"
+                  autoComplete="new-password"
                   id="exampleFormControlInput1"
                   placeholder="Enter State"
                   value={state}
