@@ -70,6 +70,15 @@ const Home = () => {
             className="d-block w-100"
           />
         </picture>
+        <div className="position-absolute cta">
+          <a
+            className="text-decoration-none text-light px-4 py-3 px-lg-5 rounded-5"
+            style={{ backgroundColor: "#004dac" }}
+            href="tel:+919380097119"
+          >
+            Call Now
+          </a>
+        </div>
         <div className="position-absolute form-div-desktop  rounded-4">
           <form onSubmit={submitLead} className="mx-auto p-4">
             <div className="">

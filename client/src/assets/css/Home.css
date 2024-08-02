@@ -44,6 +44,11 @@ label {
   display: none;
 }
 
+.cta {
+  top: 53%;
+  left: 6.5%;
+}
+
 @media (min-width: 768px) and (max-width: 1024px) {
   .submit-btn {
     background-color: white;
@@ -65,5 +70,10 @@ label {
   }
   .form-div-mobile {
     display: none;
+  }
+  .cta {
+    top: 24%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
