@@ -226,6 +226,7 @@ const Home = () => {
               </label>
               <input
                 type="tel"
+                placeholder="Enter Phone Number"
                 value={phoneNumber}
                 onChange={(e) => {
                   const phoneNumber = e.target.value.slice(0, 12);
